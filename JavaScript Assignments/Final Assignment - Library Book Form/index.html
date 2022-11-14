@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library book Form</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <img src="img/logo.png" alt="Logo" height="30px" width="30px">
+            <p>Library Protal</p>
+            <a href="#">Books</a>
+        </header>
+        <section>
+            <h1>Add New Book</h1>
+            <form onsubmit="return validate()" method="post">
+                <table>
+                    <tr>
+                        <td>Category</td>
+                        <td>
+                            <select name="category" id="category" onkeyup="" id="category" onchange="validateCategory()">
+                                <option value="select">Select</option>
+                                <option value="IT">IT</option>
+                                <option value="CSE">CSE</option>
+                                <option value="EEE">EEE</option>
+                                <option value="ECE">ECE</option>
+                                <option value="MECH">MECH</option>
+                                <option value="CIVIL">CIVIL</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr id="category-error">
+                    </tr>
+                    <tr>
+                        <td>Book Name</td>
+                        <td><input type="text" name="bookname" id="bookname" onkeyup="validateBookName()"></td>
+                    </tr>
+                    <tr id="bookname-error"></tr>
+                    <tr>
+                        <td>Author Name</td>
+                        <td><input type="text" name="authorname" id="authorname" onkeyup="validateAuthorName()"></td>
+                    </tr>
+                    <tr id="authorname-error"></tr>
+                    <tr>
+                        <td>Author Email</td>
+                        <td><input type="text" name="authoremail" id="authoremail" onkeyup="validateAuthorEmail()"></td>
+                    </tr>
+                    <tr id="authoremail-error"></tr>
+                    <tr>
+                        <td>Published Year</td>
+                        <td><input type="text" name="publishedyear" id="publishedyear" onkeyup="validateYear()"></td>
+                    </tr>
+                    <tr id="publishedyear-error"></tr>
+                    <tr>
+                        <td>Price</td>
+                        <td><input type="text" name="price" id="price" onkeyup="validatePrice()"></td>
+                    </tr>
+                    <tr id="price-error"></tr>
+                </table>
+                <button type="submit">Save</button>
+                <button type="reset" onclick="clearValue()">Cancel</button>
+                <button type="button" onclick="ShowDetails()">Show</button>
+            </form>            
+        </section>
+        <footer>
+            Copyright &copy;2022 - present Syncfusion
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Details</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        if (document.cookie.length == 0) {
+            location.replace('index.html');
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <img src="img/logo.png" alt="Logo" height="30px" width="30px">
+            <p>Library Protal</p>
+            <a href="#">Books</a>
+            <a href="index.html">Home</a>
+        </header>
+        <section>
+            <h1>Book Details</h1>
+            <form onsubmit="return validate()" method="post">
+                <table>
+                    <tr>
+                        <td><strong>Category</strong></td>
+                        <td id="category-field"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Book Name</strong></td>
+                        <td id="bookname-field"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Author Name</strong></td>
+                        <td id="authorname-field"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Author Email</strong></td>
+                        <td id="authoremail-field"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Published Year</strong></td>
+                        <td id="publishedyear-field"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Price</strong></td>
+                        <td id="price-field"></td>
+                    </tr>
+                    <tr id="price-error"></tr>
+                </table>
+            </form>            
+        </section>
+        <footer>
+            Copyright &copy;2022 - present Syncfusion
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/saved-details.js"></script>
+</body>
+</html>
